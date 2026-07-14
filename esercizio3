@@ -1,0 +1,38 @@
+#Immagina di essere un cuoco in un ristorante molto affollato. Il tuo compito è preparare dei piatti per i clienti che ordinano. Ogni cliente puo' ordinare uno dei seguenti piatti (simulato con un input())
+#Pizza
+#Pasta
+#Hamburger
+#Rappresentare la situazione con un ciclo while che deve continuare finchè l'utente non scriverà "basta" nell'input o se hai raggiunto il numero massimo di piatti che puoi preparare (ad esempio 10). Il programma deve:
+#Contare quante pizze, paste e hamburger sono stati preparati per categoria.
+#Stampare il totale per ogni categoria di piatto.
+
+
+
+ordine= 0
+basta = "basta"
+pizza = ""
+pasta = ""
+hamburger = ""
+continuare = ""
+while ordine <= 10:
+    print (f"Inserisci il tuo ordine indicando una pietanza alla volta tra pizza, pasta e hamburgher. Alla fine scrivi basta. Puoi ordindinare un massimo di 10 pietanze in totale.")
+    pizza =input("Quante pizze desideri ordinare?").lower()
+    if pizza == "basta":
+        break
+    else:
+        pizza = int(pizza)
+    pasta = input("Quante porzioni di pasta desideri ordinare?").lower()
+    if pasta == "basta":
+        break
+    else:
+        pasta = int(pasta)
+    hamburger = (input("Quanti hamburger desideri ordinare?")).lower()
+    if hamburger == "basta":
+        break
+    else:
+        hamburger = int(hamburger)
+    ordine = (pizza + pasta + hamburger)
+    print (f"Hai ordinato {pizza} pizze,{pasta} porzioni di pasta e {hamburger} hamburger")
+    print ("Se hai finito puoi digitare basta, altrimenti continuare a ordinare")
+    if continuare == "basta":
+        break

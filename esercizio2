@@ -1,0 +1,18 @@
+#Scrivi un programma che calcola la somma totale dei punti di tutte le squadre di calcio che vengono inserite dall'utente.
+
+#Il programma deve:
+#Chiedere all'utente di inserire il numero di squadre di calcio.
+#Per ogni squadra, chiedere il nome e il numero di punti accumulati.
+#Alla fine sommare tutti i punti di tutte le squadre e stampare il totale.
+
+punteggio_squadra_finale = 0
+nome_squadra_finale=""
+squadra=int(input("Quante squadre di calcio ci sono nel torneo?"))
+for i in range (squadra):
+    nome_squadra = (input(f"Dimmi il nome delle squadre all'interno del torneo{i+1}."))
+    nome_squadra_finale += nome_squadra + " "
+    punteggio_squadra = input("Quanti punti ha fatto {nome_squadra}?")
+    punteggio_squadra_finale += int(punteggio_squadra)
+
+somma=f"La somma dei punteggi di {nome_squadra_finale} è {punteggio_squadra_finale}."
+print(somma)

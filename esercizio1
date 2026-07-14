@@ -1,0 +1,21 @@
+#Scrivi un programma che chieda all'utente di inserire il numero di vendite effettuate da un dipendente in un mese.
+#Il programma deve calcolare e stampare il bonus in euro da dare a questo dipendente in base alle seguenti regole:
+
+#Se il dipendente ha effettuato più di 50 vendite, il bonus è di 500€ quindi il programma deve stampare 500€.
+#Se il dipendente ha effettuato tra 30 e 50 vendite (inclusi), il bonus è di 250€ quindi il programma deve stampare 250€.
+#Se il dipendente ha effettuato tra 10 e 29 vendite (inclusi), il bonus è di 100€ quindi il programma deve stampare 100€.
+#Se il dipendente ha effettuato meno di 10 vendite, il bonus è 0€ quindi il programma deve stampare "nessun bonus".
+
+
+
+
+vendite=float(input("Quante vendite hai fatto?"))
+if 50<vendite:
+        print("Il tuo bonus è di 500 euro")
+elif 30 <= vendite >= 50:
+    print ("Il tuo bonus è 250 euro")
+elif 10 <= vendite <= 29:
+    print ("Il tuo bonus è 100 euro")
+elif 10>vendite:
+    print ("nessun bonus")
+	

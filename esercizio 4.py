@@ -1,0 +1,30 @@
+# Immagina di essere il responsabile di una piccola flotta di automobili. Hai bisogno di un programma che ti permetta di
+# aggiungere nuove automobili alla flotta, visualizzare quali sono disponibili per il noleggio e raccogliere
+# informazioni utili come l'anno di produzione e lo stato delle automobili.
+#Crea una lista chiamata auto_disponibili che contenga i nomi di 5 automobili.
+#Aggiungi 3 nuove automobili alla lista.
+#Stampa l'elenco SOLO delle automobili disponibili.
+#Crea un dizionario chiamato flotta dove ogni chiave
+#è il nome di un'auto e il valore è un altro dizionario che contiene:
+#"anno" (anno di produzione)
+#"stato" (disponibile o noleggiata)
+#Aggiungi informazioni su ogni automobile nel dizionario e stampa i dettagli per ciascuna.
+from enum import auto
+
+auto_disponibili =["auto1","auto2","auto3","auto4","auto6"]
+auto_disponibili.insert(4,"auto5")
+auto_disponibili.append("auto7")
+auto_disponibili.append("auto8")
+#ipotizzo siano disponibili le auto 2,3,4 e 5
+print(f"sono disponibili {auto_disponibili[1:5]}")
+auto1= {"anno":1991,"stato":"non disponibile"}
+auto2={"anno":1992,"stato":"disponibile"}
+auto3={"anno":1993,"stato":"disponibile"}
+auto4={"anno":1994,"stato":"disponibile"}
+auto5={"anno":1995,"stato":"disponibile"}
+auto6={"anno":1996,"stato":"non disponibile"}
+auto7={"anno":1997,"stato":"non disponibile"}
+auto8={"anno":1998,"stato":"non disponibile"}
+flotta= [auto1,auto2,auto3,auto4,auto5,auto6,auto7,auto8]
+for i, auto in enumerate(flotta, 1):
+    print(f"Auto {i}: Anno {auto['anno']} - Stato: {auto['stato']}")
